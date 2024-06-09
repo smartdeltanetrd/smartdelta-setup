@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mong_db:
+    container_name: smartdelta-mongo
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./mongo_db:/data/db
+
+  api:
+    build: ./smartdelta-backend-ts
+    ports: 
+      - "5000:5000"
+    volumes:
+      - ./smartdelta-backend-ts:/usr/src/app
+      - /usr/src/app/node_modules
+    command: ["npm", "run", "dev"]
+    environment:
+      PORT: 5000
+      MONGO_DB_CONNECTION_STRING: mongodb://mong_db:27017/
+      NODE_ENV: "development"
+      MONGO_DB_DATABASE_NAME: "SmartDeltaApi"
+      MULTER_CSV_DIR: "src/data/uploads/csvData"
+      OPENAI_API_KEY: "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"
+    depends_on:
+      - mong_db
+  
+  frontend:
+    build: ./smartdelta-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./smartdelta-frontend:/usr/src/app:delegated
+      - /usr/src/app/node_modules/
+    depends_on:
+      - api
+      - mong_db
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+volumes:
+  mongo_db: {}
+
+
+
