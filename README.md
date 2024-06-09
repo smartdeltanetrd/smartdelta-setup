@@ -71,21 +71,23 @@ icacls C:\mongo_db /grant Users:(RX) /T`
 
 ## Directory Structure
 After completing the setup steps, your `SmartDelta` directory should look like this:
-
+<pre>
+<code>
 SmartDelta/
 ├── docker-compose.yml
 ├── smartdelta-frontend/
-│   ├── <frontend project files>
+│   ├── &lt;frontend project files&gt;
 │   └── ...
 ├── smartdelta-backend-ts/
-│   ├── <backend project files>
+│   ├── &lt;backend project files&gt;
 │   └── ...
 ├── smartdelta-ml-backend/
-│   ├── <ml-backend project files>
+│   ├── &lt;ml-backend project files&gt;
 │   └── ...
 └── mongo_db/
-    └── <MongoDB files>
-
+    └── &lt;MongoDB files&gt;
+</code>
+</pre>
 
 
 ## How to stop containers
