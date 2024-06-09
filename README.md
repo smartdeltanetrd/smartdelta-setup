@@ -77,13 +77,13 @@ SmartDelta/
 ├── docker-compose.yml
 ├── smartdelta-frontend/
 │   ├── &lt;frontend project files&gt;
-│   └── ...
+│   
 ├── smartdelta-backend-ts/
 │   ├── &lt;backend project files&gt;
-│   └── ...
+│   
 ├── smartdelta-ml-backend/
 │   ├── &lt;ml-backend project files&gt;
-│   └── ...
+│   
 └── mongo_db/
     └── &lt;MongoDB files&gt;
 </code>
