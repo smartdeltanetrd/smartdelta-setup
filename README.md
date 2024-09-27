@@ -24,16 +24,23 @@
 
 4. Download the `docker-compose.yml` file from the setup guide repository and move it to the root of `SmartDelta`.
 
-5. Run the following command in the root of `SmartDelta` folder:
+5. ## Data Science Flask API Setup
+    Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
+    ```sh
+    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
+    ```
+
+
+6. Run the following command in the root of `SmartDelta` folder:
     ```sh
     docker compose up
     ```
 
-6. Wait a few minutes for the containers to be created and started.
-7.  If you get an error related the mongo_db file permission run  `sudo chmod -R 755 /mongo_db` on MACOS or Lınux. If you use Windows, then run `icacls C:\mongo_db /grant %username%:F /T
+7. Wait a few minutes for the containers to be created and started.
+8.  If you get an error related the mongo_db file permission run  `sudo chmod -R 755 /mongo_db` on MACOS or Lınux. If you use Windows, then run `icacls C:\mongo_db /grant %username%:F /T
 icacls C:\mongo_db /grant Users:(RX) /T`
  
-8. Verify the setup:
+9. Verify the setup:
     - Navigate to `http://localhost:5001`. You should see the following JSON response:
       ```json
       {"message":"Hello World"}
@@ -42,7 +49,7 @@ icacls C:\mongo_db /grant Users:(RX) /T`
       
     - Navigate to `http://localhost:3000` to check if the frontend is running without issues.
 
-9. In the frontend app:
+10. In the frontend app:
     - Click on the file upload menu item and upload one of the CSV files in the repository.
     - After uploading the file, you will be navigated to the mapping visualizer.
     - Go back to the file upload page to see the uploaded file list in the manage file part.
@@ -58,13 +65,11 @@ icacls C:\mongo_db /grant Users:(RX) /T`
     ```sh
     docker logs -f smartdelta-api-1
     ```
-
-## Data Science Flask API Setup
-
-1. Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
+  - To see the logs of the data science Flask  api, open a terminal under the root of `smartdelta-ml-backend` and run:
     ```sh
-    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
+    docker logs -f data-science-1
     ```
+
 
 
 
