@@ -34,7 +34,7 @@
 icacls C:\mongo_db /grant Users:(RX) /T`
  
 8. Verify the setup:
-    - Navigate to `http://localhost:5000`. You should see the following JSON response:
+    - Navigate to `http://localhost:5001`. You should see the following JSON response:
       ```json
       {"message":"Hello World"}
       ```
@@ -63,10 +63,9 @@ icacls C:\mongo_db /grant Users:(RX) /T`
 
 1. Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
     ```sh
-    git clone https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
+    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
     ```
 
-2. Follow the guideline on this [link](https://github.com/smartdeltanetrd/smartdelta-ml-backend/blob/master/README.md).
 
 
 ## Directory Structure
