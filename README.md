@@ -17,8 +17,8 @@
 
 3. Clone the repositories: 
     ```sh
-    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-frontend.git
-    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-backend-ts.git
+    git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-frontend.git
+    git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-backend-ts.git
     ```
     Note: For each repo create a new branch(dev-yourName) and switch to your new branch for development.
 
@@ -27,7 +27,7 @@
 5. ## Data Science Flask API Setup
     Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
     ```sh
-    git clone -b dev-eren https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
+    git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
     ```
 
 
