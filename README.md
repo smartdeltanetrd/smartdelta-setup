@@ -20,7 +20,7 @@
     git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-frontend.git
     git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-backend-ts.git
     ```
-    Note: For each repo create a new branch(dev-yourName) and switch to your new branch for development.
+    Note: **After cloning repos above using above commands**, For each repo create a new branch(dev-yourName) and switch to your new branch for development.
 
 4. Download the `docker-compose.yml` file from the setup guide repository and move it to the root of `SmartDelta`.
 
