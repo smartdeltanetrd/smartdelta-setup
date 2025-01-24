@@ -22,8 +22,8 @@ services:
       NODE_ENV: "development"
       MONGO_DB_DATABASE_NAME: "SmartDeltaApi"
       MULTER_CSV_DIR: "src/data/uploads/csvData"
-      OPENAI_API_KEY: "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"
-      ENCRYPTION_KEY: "o8RFP2VOKmLsIENw06fs/wh4sdHjv3aakFHoSM2U1jU="
+      OPENAI_API_KEY: "" # get your api key from openai
+      ENCRYPTION_KEY: "" # get your enc key with related 64-bit encription algo
     depends_on:
       - mong_db
 
@@ -39,7 +39,7 @@ services:
       - mong_db
     environment:
       - CHOKIDAR_USEPOLLING=true
-      - REACT_APP_SECRET_KEY=o8RFP2VOKmLsIENw06fs/wh4sdHjv3aakFHoSM2U1jU=
+      - REACT_APP_SECRET_KEY= # get your enc key with related 64-bit encription algo
 
   data-science-api:
     build: ./smartdelta-ml-backend
