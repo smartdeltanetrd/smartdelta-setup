@@ -23,24 +23,25 @@
     Note: **After cloning repos above using above commands**, For each repo create a new branch(dev-yourName) and switch to your new branch for development.
 
 4. Download the `docker-compose.yml` file from the setup guide repository and move it to the root of `SmartDelta`.
+   ### Note: You must get your OpenAI API key from platform.openai.com, and you must generate your 64-bit encription key. Then, put those keys to related areas on `docker-compose.yml` file
 
-5. ## Data Science Flask API Setup
+6. ## Data Science Flask API Setup
     Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
     ```sh
     git clone -b dev-alper https://github.com/smartdeltanetrd/smartdelta-ml-backend.git
     ```
 
 
-6. Run the following command in the root of `SmartDelta` folder:
+7. Run the following command in the root of `SmartDelta` folder:
     ```sh
     docker compose up
     ```
 
-7. Wait a few minutes for the containers to be created and started.
-8.  If you get an error related the mongo_db file permission run  `sudo chmod -R 755 /mongo_db` on MACOS or Lınux. If you use Windows, then run `icacls C:\mongo_db /grant %username%:F /T
+8. Wait a few minutes for the containers to be created and started.
+9.  If you get an error related the mongo_db file permission run  `sudo chmod -R 755 /mongo_db` on MACOS or Lınux. If you use Windows, then run `icacls C:\mongo_db /grant %username%:F /T
 icacls C:\mongo_db /grant Users:(RX) /T`
  
-9. Verify the setup:
+10. Verify the setup:
     - Navigate to `http://localhost:5001`. You should see the following JSON response:
       ```json
       {"message":"Hello World"}
@@ -49,7 +50,7 @@ icacls C:\mongo_db /grant Users:(RX) /T`
       
     - Navigate to `http://localhost:3000` to check if the frontend is running without issues.
 
-10. In the frontend app:
+11. In the frontend app:
     - Click on the file upload menu item and upload one of the CSV files in the repository.
     - After uploading the file, you will be navigated to the mapping visualizer.
     - Go back to the file upload page to see the uploaded file list in the manage file part.
