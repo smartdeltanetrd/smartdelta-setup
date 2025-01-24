@@ -23,7 +23,7 @@
     Note: **After cloning repos above using above commands**, For each repo create a new branch(dev-yourName) and switch to your new branch for development.
 
 4. Download the `docker-compose.yml` file from the setup guide repository and move it to the root of `SmartDelta`.
-   ### Note: You must get your OpenAI API key from platform.openai.com, and you must generate your 64-bit encription key. Then, put those keys to related areas on `docker-compose.yml` file
+   #### Note: You must get your OpenAI API key from platform.openai.com, and you must generate your 64-bit encription key. Then, put those keys to related areas on `docker-compose.yml` file
 
 6. ## Data Science Flask API Setup
     Under the root of `SmartDelta` folder, clone the `smartdelta-ml-backend` repository:
